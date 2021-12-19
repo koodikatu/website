@@ -7,10 +7,10 @@
 
 <Header />
 
-<main>
+<main class="grid justify-items-center">
 	<slot />
 </main>
 
-<footer class="p-4">
+<footer class="p-4 lg:mt-4 prose lg:prose-xl text-green m-auto">
 	&copy; {year} Koodikatu | All Rights Reserved
 </footer>

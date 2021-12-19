@@ -7,8 +7,7 @@ module.exports = {
 			salmon: '#FFC8B0',
 			green: '#163A45',
 			black: '#041621'
-		},
-		extend: {}
+		}
 	},
-	plugins: []
+	plugins: [require('@tailwindcss/typography')]
 };
