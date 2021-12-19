@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import logo from '$assets/svelte-logo.svg';
+	import logo from '$assets/koodikatu.svg';
 </script>
 
-<header />
+<header class="flex justify-center p-4">
+	<img src={logo} alt="Koodikatu logo" />
+</header>
