@@ -7,7 +7,7 @@
 	<title>Home</title>
 </svelte:head>
 
-<section class="px-4 prose lg:prose-xl prose-h1:text-green">
+<section class="px-4 mt-4 lg:mt-8 prose lg:prose-xl prose-h1:text-green">
 	<h1>Grow your business with a modern website you are proud to share</h1>
 	<button class="w-full lg:w-auto bg-salmon rounded-full p-2 lg:p-4 lg:px-8 text-lg font-bold"
 		>Get in touch</button
@@ -58,4 +58,47 @@
 		the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
 		of type and scrambled it to make a type specimen book.
 	</main>
+</section>
+<section class="mt-8 pt-8 w-full">
+	<div
+		class="bg-green h-8 lg:h-16 [clip-path:polygon(0%_2rem,0%_100%,100%_100%,100%_0%)] lg:[clip-path:polygon(0%_4rem,0%_100%,100%_100%,100%_0%)]"
+	/>
+	<div class="bg-green pb-8 w-full grid">
+		<div class="prose lg:prose-xl prose-headings:text-beige text-beige mx-auto px-4">
+			<article>
+				<h2>Ready to bring your business to the next level?</h2>
+				<p>You can reach me anytime via hello@koodikatu.com or simply fill out the contact form.</p>
+			</article>
+			<form class="bg-beige text-green grid rounded-md p-4 lg:p-8 gap-4">
+				<label class="grid">
+					Name:
+					<input type="text" class="bg-salmon border-0 rounded-md shadow-current shadow-sm" />
+				</label>
+				<label class="grid">
+					Email: (optional)
+					<input
+						type="email"
+						id="email"
+						class="bg-salmon border-0 rounded-md shadow-current shadow-sm"
+					/>
+				</label>
+				<label class="grid">
+					Message:
+					<textarea
+						name="message"
+						id="message"
+						rows="10"
+						spellcheck
+						required
+						class="bg-salmon border-0 rounded-md shadow-current shadow-sm resize-none"
+					/>
+				</label>
+				<div>
+					<button type="submit" class="bg-salmon rounded-md shadow-current shadow-sm p-2"
+						>Reach out 👋</button
+					>
+				</div>
+			</form>
+		</div>
+	</div>
 </section>
