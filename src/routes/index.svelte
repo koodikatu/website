@@ -72,14 +72,17 @@
 			<form class="bg-beige text-green grid rounded-md p-4 lg:p-8 gap-4">
 				<label class="grid">
 					Name:
-					<input type="text" class="bg-salmon border-0 rounded-md shadow-current shadow-sm" />
+					<input
+						type="text"
+						class="bg-salmon border-0 rounded-md shadow-current shadow-sm focus:ring focus:ring-orange"
+					/>
 				</label>
 				<label class="grid">
 					Email: (optional)
 					<input
 						type="email"
 						id="email"
-						class="bg-salmon border-0 rounded-md shadow-current shadow-sm"
+						class="bg-salmon border-0 rounded-md shadow-current shadow-sm focus:ring focus:ring-orange"
 					/>
 				</label>
 				<label class="grid">
@@ -90,11 +93,13 @@
 						rows="10"
 						spellcheck
 						required
-						class="bg-salmon border-0 rounded-md shadow-current shadow-sm resize-none"
+						class="bg-salmon border-0 rounded-md shadow-current shadow-sm resize-none focus:ring focus:ring-orange"
 					/>
 				</label>
 				<div>
-					<button type="submit" class="bg-salmon rounded-md shadow-current shadow-sm p-2"
+					<button
+						type="submit"
+						class="bg-salmon rounded-md shadow-current shadow-sm p-2 lg:p-4 lg:px-8"
 						>Reach out 👋</button
 					>
 				</div>
