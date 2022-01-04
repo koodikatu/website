@@ -1,15 +1,21 @@
 <script context="module" lang="ts">
 	export const prerender = true;
 	import profilePicture from '$assets/johncheng.png';
+	const contactRef = 'contact';
+
+	const scrollTo = (element: string) => () =>
+		document.getElementById(element).scrollIntoView({ behavior: 'smooth' });
 </script>
 
 <svelte:head>
-	<title>Home</title>
+	<title>Koodikatu - Home</title>
 </svelte:head>
 
 <section class="px-4 mt-4 lg:mt-8 prose lg:prose-xl prose-h1:text-green">
 	<h1>Grow your business with a modern website you are proud to share</h1>
-	<button class="w-full lg:w-auto bg-salmon rounded-full p-2 lg:p-4 lg:px-8 text-lg font-bold"
+	<button
+		on:click={scrollTo(contactRef)}
+		class="w-full lg:w-auto bg-salmon rounded-full p-2 lg:p-4 lg:px-8 text-lg font-bold"
 		>Get in touch</button
 	>
 </section>
@@ -59,7 +65,7 @@
 		of type and scrambled it to make a type specimen book.
 	</main>
 </section>
-<section class="mt-8 pt-8 w-full">
+<section class="mt-8 pt-8 w-full" id={contactRef}>
 	<div
 		class="bg-green h-8 lg:h-16 [clip-path:polygon(0%_2rem,0%_100%,100%_100%,100%_0%)] lg:[clip-path:polygon(0%_4rem,0%_100%,100%_100%,100%_0%)]"
 	/>
