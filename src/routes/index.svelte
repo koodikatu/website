@@ -13,10 +13,10 @@
 
 <section class="px-4 mt-4 lg:mt-8 prose lg:prose-xl prose-h1:text-green">
 	<h1>Grow your business with a modern website you are proud to share</h1>
-	<button
-		on:click={scrollTo(contactRef)}
-		class="w-full lg:w-auto bg-salmon rounded-full p-2 lg:p-4 lg:px-8 text-lg font-bold"
-		>Get in touch</button
+	<a
+		href={`#${contactRef}`}
+		class="w-full lg:w-auto bg-salmon rounded-full p-2 lg:p-4 lg:px-8 text-lg font-bold no-underline"
+		>Get in touch</a
 	>
 </section>
 <section class="mt-8 py-8 w-full">
