@@ -15,6 +15,7 @@
 	<h1>Grow your business with a modern website you are proud to share</h1>
 	<a
 		href={`#${contactRef}`}
+		rel="external"
 		class="w-full lg:w-auto bg-salmon rounded-full p-2 lg:p-4 lg:px-8 text-lg font-bold no-underline"
 		>Get in touch</a
 	>
