@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"type": "module",
 	"scripts": {
-		"dev": "svelte-kit dev",
+		"dev": "svelte-kit dev --host",
 		"build": "svelte-kit build",
 		"package": "svelte-kit package",
 		"preview": "svelte-kit preview",
@@ -13,7 +13,9 @@
 		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. .",
 		"test": "jest",
 		"test:watch": "npm run test -- --watch",
-		"test:update": "npm run test -- --updateSnapshot"
+		"test:update": "npm run test -- --updateSnapshot",
+		"dependencies:check": "ncu",
+		"dependencies:update": "ncu -u"
 	},
 	"devDependencies": {
 		"@babel/core": "7.16.5",
@@ -39,6 +41,7 @@
 		"jest": "^27.0.0",
 		"jest-svg-transformer": "1.0.0",
 		"jest-transform-stub": "2.0.0",
+		"npm-check-updates": "12.1.0",
 		"postcss": "8.4.5",
 		"prettier": "^2.4.1",
 		"prettier-plugin-svelte": "^2.4.0",
