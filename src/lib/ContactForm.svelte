@@ -5,28 +5,32 @@
 
 <script lang="ts">
 	export let id: string;
+
 	let contactError = false;
+	let name: string, email: string, message: string;
 
-	const handleSubmit = async (e: any) => {
-		try {
-			const response = await fetch('/api/contact', {
-				method: 'POST',
-				body: JSON.stringify({
-					name: e.target.name.value,
-					email: e.target.email.value,
-					message: e.target.message.value
-				}),
-				headers: {
-					'Content-Type': 'application/json'
-				}
-			});
-
-			if (response.ok) {
-				goto('/message-sent');
-			}
-		} catch (error) {
-			contactError = true;
+	const handleSubmit = async (
+		e: SubmitEvent & {
+			currentTarget: EventTarget & HTMLFormElement;
 		}
+	) => {
+		const data = { name, email, message };
+
+		fetch('/api/contact', {
+			method: 'POST',
+			body: JSON.stringify(data),
+			headers: { 'Content-Type': 'application/json' }
+		})
+			.then((res) => {
+				if (res.ok) {
+					goto('/message-sent');
+				}
+
+				contactError = true;
+			})
+			.catch(() => {
+				contactError = true;
+			});
 	};
 </script>
 
@@ -48,6 +52,7 @@
 				<label class="grid" for="name">
 					Name:
 					<input
+						bind:value={name}
 						type="text"
 						required
 						class="bg-salmon border-0 rounded-md shadow-current shadow-sm focus:ring focus:ring-orange"
@@ -56,6 +61,7 @@
 				<label class="grid" for="email">
 					Email: (optional)
 					<input
+						bind:value={email}
 						type="email"
 						id="email"
 						class="bg-salmon border-0 rounded-md shadow-current shadow-sm focus:ring focus:ring-orange"
@@ -64,6 +70,7 @@
 				<label class="grid" for="message">
 					Message:
 					<textarea
+						bind:value={message}
 						name="message"
 						id="message"
 						rows="10"
