@@ -78,7 +78,8 @@
 		<p>
 			In my career so far, I have worked with great mentors at <a
 				href="https://futurice.com"
-				target="_blank">Futurice</a
+				target="_blank"
+				rel="noopener noreferrer">Futurice</a
 			>
 			where I honed my skills and learned what it means to build services that matter. I am particularly
 			proud of having been part of the
