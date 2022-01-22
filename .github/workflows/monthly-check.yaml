@@ -1,7 +1,7 @@
 name: Monthly checks
 on:
   schedule:
-    - cron: "0 0 1 * *"
+    - cron: '0 0 1 * *'
 jobs:
   update-dep:
     runs-on: ubuntu-latest
@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: "14"
+          node-version: '14'
       - name: Install dependencies
         run: npm install
       - name: Update dependencies

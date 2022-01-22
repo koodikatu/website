@@ -9,11 +9,7 @@
 	let contactError = false;
 	let name: string, email: string, message: string;
 
-	const handleSubmit = async (
-		e: SubmitEvent & {
-			currentTarget: EventTarget & HTMLFormElement;
-		}
-	) => {
+	const handleSubmit = async () => {
 		const data = { name, email, message };
 
 		fetch('/api/contact', {
