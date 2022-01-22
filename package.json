@@ -57,6 +57,9 @@
 	"dependencies": {
 		"@fontsource/fira-mono": "^4.5.0",
 		"@lukeed/uuid": "^2.0.0",
-		"cookie": "^0.4.1"
+		"cookie": "^0.4.1",
+		"dotenv": "14.2.0",
+		"fp-ts": "2.11.8",
+		"io-ts": "2.2.16"
 	}
 }
