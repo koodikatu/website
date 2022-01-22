@@ -42,7 +42,13 @@ const escape = (str: string) =>
 	Object.keys(escapedCharacaters).reduce((acc, key) => acc.replaceAll(key, `\\${key}`), str);
 
 export const post: RequestHandler = async (req): Promise<EndpointOutput> => {
-	const { TELEGRAM_TOKEN: telegramToken, TELEGRAM_CHAT_ID: chatId } = process.env;
+	const telegramToken = process.env['PREVIEW']
+		? process.env['PREVIEW_TELEGRAM_TOKEN']
+		: process.env['TELEGRAM_TOKEN'];
+
+	const chatId = process.env['PREVIEW']
+		? process.env['PREVIEW_TELEGRAM_CHAT_ID']
+		: process.env['TELEGRAM_CHAT_ID'];
 
 	const sendMessage = ({ name, email, message }: Message) =>
 		TE.tryCatch(async () => {
