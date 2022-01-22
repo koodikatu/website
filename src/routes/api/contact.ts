@@ -18,28 +18,31 @@ const MessageBody = t.type({
 type Message = t.TypeOf<typeof MessageBody>;
 
 const escapedCharacaters = {
-	_: null,
-	'*': null,
-	'[': null,
-	']': null,
-	'(': null,
-	')': null,
-	'~': null,
-	'`': null,
-	'>': null,
-	'#': null,
-	'+': null,
-	'-': null,
-	'=': null,
-	'|': null,
-	'{': null,
-	'}': null,
-	'.': null,
-	'!': null
+	'\\_': null,
+	'\\*': null,
+	'\\[': null,
+	'\\]': null,
+	'\\(': null,
+	'\\)': null,
+	'\\~': null,
+	'\\`': null,
+	'\\>': null,
+	'\\#': null,
+	'\\+': null,
+	'\\-': null,
+	'\\=': null,
+	'\\|': null,
+	'\\{': null,
+	'\\}': null,
+	'\\.': null,
+	'\\!': null
 };
 
 const escape = (str: string) =>
-	Object.keys(escapedCharacaters).reduce((acc, key) => acc.replaceAll(key, `\\${key}`), str);
+	Object.keys(escapedCharacaters).reduce(
+		(acc, key) => acc.replace(new RegExp(key, 'g'), `${key}`),
+		str
+	);
 
 export const post: RequestHandler = async (req): Promise<EndpointOutput> => {
 	const telegramToken = process.env['PREVIEW']
