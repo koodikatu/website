@@ -20,6 +20,7 @@
 			.then((res) => {
 				if (!res.ok) {
 					contactError = true;
+					return;
 				}
 				goto('/message-sent');
 			})
