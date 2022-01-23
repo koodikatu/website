@@ -10,3 +10,5 @@
 
 [context.deploy-preview]
   command = "sed -i \"s|TELEGRAM_TOKEN|${PREVIEW_TELEGRAM_TOKEN}|g\" netlify.toml && yarn build"
+  TELEGRAM_TOKEN = ""
+  TELEGRAM_CHAT_ID = ""
