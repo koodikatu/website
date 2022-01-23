@@ -18,11 +18,10 @@
 			headers: { 'Content-Type': 'application/json' }
 		})
 			.then((res) => {
-				if (res.ok) {
-					goto('/message-sent');
+				if (!res.ok) {
+					contactError = true;
 				}
-
-				contactError = true;
+				goto('/message-sent');
 			})
 			.catch(() => {
 				contactError = true;
