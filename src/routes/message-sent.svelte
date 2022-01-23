@@ -1,5 +1,5 @@
 <svelte:head>
-	<title>Koodikatu - Thank you page</title>
+	<title>Koodikatu - Thank you for your message</title>
 </svelte:head>
 
 <section class="px-4 prose lg:prose-xl grid justify-items-center text-center">
@@ -9,8 +9,8 @@
 		src="https://assets5.lottiefiles.com/packages/lf20_hqrpwcwb.json"
 		background="transparent"
 		speed="1"
-		style="width: 300px; height: 300px;"
 		loop
 		autoplay
+		class="w-72 h-72"
 	/>
 </section>

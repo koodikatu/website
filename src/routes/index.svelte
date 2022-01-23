@@ -4,6 +4,7 @@
 	import profilePicture2x from '$assets/johncheng@2x.png';
 	import Section from '$lib/Section.svelte';
 	import ContactForm from '$lib/ContactForm.svelte';
+	import Highlight from '$lib/Highlight.svelte';
 	const contactRef: string = 'contact';
 </script>
 
@@ -25,50 +26,56 @@
 </section>
 <Section>
 	<div class="bg-green grid py-8 pb-16 lg:py-16 lg:pb-24 w-full justify-items-center">
-		<div
-			class="prose lg:prose-xl lg:max-w-5xl prose-headings:text-salmon text-beige lg:grid lg:grid-flow-col lg:place-content-between lg:gap-12"
-		>
-			<article class="px-4">
-				<h2>01</h2>
+		<section class="prose lg:prose-xl lg:max-w-5xl prose-headings:text-salmon text-beige px-4">
+			<h2>We will walk forth together, one step at a time</h2>
+			<p>
+				During our collaboration, we will regularly sync to be sure our teamwork is going well and
+				we are heading towards our goal. How we will bring out <Highlight
+					>the best of our team</Highlight
+				>:
+			</p>
+			<div class="lg:grid lg:grid-flow-col lg:place-content-between lg:gap-12">
 				<article>
-					<p>Every adventure has a hero, and that's <span>you</span>.</p>
-					<p>
-						I will help you <span
-							class="underline decoration-orange decoration-4 underline-offset-4"
-							>understand who you are</span
-						>, what are your core values and how you can impact your users.
-					</p>
+					<h2>01</h2>
+					<article>
+						<p>Every adventure has a hero, and that's you.</p>
+						<p>
+							I will help you <Highlight>understand who you are</Highlight>, what are your core
+							values and how you can impact your users.
+						</p>
+					</article>
 				</article>
-			</article>
-			<article class="px-4">
-				<h2>02</h2>
 				<article>
-					<p>Then we will design all the tools needed to help you thrive and reach your goals.</p>
-					<p>
-						<span>Together</span>, we will bring your community closer and
-						<span class="underline decoration-orange decoration-4 underline-offset-4"
-							>elevate your superpowers</span
-						>.
-					</p>
+					<h2>02</h2>
+					<article>
+						<p>Then we will design all the tools needed to help you thrive and reach your goals.</p>
+						<p>
+							Together, we will bring your community closer and
+							<Highlight>elevate your superpowers</Highlight>.
+						</p>
+					</article>
 				</article>
-			</article>
-			<article class="px-4">
-				<h2>03</h2>
 				<article>
-					<p>To fight the final boss, you will need to summon all your strength.</p>
-					<p>
-						I will build <span class="underline decoration-orange decoration-4 underline-offset-4"
-							>reliable and robust</span
-						> services that will facilitate your journey.
-					</p>
+					<h2>03</h2>
+					<article>
+						<p>To fight the final boss, you will need to summon all your strength.</p>
+						<p>
+							I will build <Highlight>reliable and robust</Highlight> services that will facilitate your
+							journey.
+						</p>
+					</article>
 				</article>
-			</article>
-		</div>
+			</div>
+		</section>
 	</div>
 </Section>
 <section class="mt-8 lg:mt-16 px-4 prose lg:prose-xl text-green prose-headings:text-green">
-	<img src={profilePicture} srcset="{profilePicture2x} 2x" alt="" class="w-[175px] h-[175px]" />
-	<h3 class="uppercase">About me</h3>
+	<img
+		src={profilePicture}
+		srcset="{profilePicture2x} 2x"
+		alt=""
+		class="w-[175px] h-[175px] lg:w-52 lg:h-52"
+	/>
 	<h2 class="mt-0">Hey, I'm John</h2>
 	<main>
 		<p>
