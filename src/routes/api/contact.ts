@@ -45,13 +45,19 @@ const escape = (str: string) =>
 	);
 
 export const post: RequestHandler = async (req): Promise<EndpointOutput> => {
-	const telegramToken = process.env['PREVIEW']
-		? process.env['PREVIEW_TELEGRAM_TOKEN']
-		: process.env['TELEGRAM_TOKEN'];
+	// const telegramToken = process.env['PREVIEW']
+	// 	? process.env['PREVIEW_TELEGRAM_TOKEN']
+	// 	: process.env['TELEGRAM_TOKEN'];
 
-	const chatId = process.env['PREVIEW']
-		? process.env['PREVIEW_TELEGRAM_CHAT_ID']
-		: process.env['TELEGRAM_CHAT_ID'];
+	// const chatId = process.env['PREVIEW']
+	// 	? process.env['PREVIEW_TELEGRAM_CHAT_ID']
+	// 	: process.env['TELEGRAM_CHAT_ID'];
+
+	const { TELEGRAM_TOKEN: telegramToken, TELEGRAM_CHAT_ID: chatId } = process.env;
+	if (!telegramToken || !chatId)
+		console.error(
+			`Missing Telegram environment variables: ${JSON.stringify({ telegramToken, chatId })}`
+		);
 
 	const sendMessage = ({ name, email, message }: Message) =>
 		TE.tryCatch(async () => {
