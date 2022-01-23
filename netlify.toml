@@ -9,6 +9,6 @@
     output_path = "reports/lighthouse.html"
 
 [context.deploy-preview]
-  command = "sed -i \"s|TELEGRAM_TOKEN|${PREVIEW_TELEGRAM_TOKEN}|g\" netlify.toml && sed -i \"s|TELEGRAM_CHAT_ID|${PREVIEW_TELEGRAM_CHAT_ID}|g\" netlify.toml && yarn build"
-  TELEGRAM_TOKEN = ""
-  TELEGRAM_CHAT_ID = ""
+  command = "sed -i \"s|TG_TOKEN_PLACEHOLDER|${PREVIEW_TELEGRAM_TOKEN}|g\" netlify.toml && sed -i \"s|TG_CHAT_ID_PLACEHOLDER|${PREVIEW_TELEGRAM_CHAT_ID}|g\" netlify.toml && yarn build"
+  TELEGRAM_TOKEN = "TG_TOKEN_PLACEHOLDER"
+  TELEGRAM_CHAT_ID = "TG_CHAT_ID_PLACEHOLDER"
