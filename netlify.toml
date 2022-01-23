@@ -10,10 +10,12 @@
 
 [context.deploy-preview]
   command = "sed -i \"s|PREVIEW_TELEGRAM_TOKEN|${PREVIEW_TELEGRAM_TOKEN}|g\" netlify.toml && sed -i \"s|PREVIEW_TELEGRAM_CHAT_ID|${PREVIEW_TELEGRAM_CHAT_ID}|g\" netlify.toml && yarn build"
-  TELEGRAM_TOKEN = "PREVIEW_TELEGRAM_TOKEN"
-  TELEGRAM_CHAT_ID = "PREVIEW_TELEGRAM_CHAT_ID"
+  [context.deploy-preview.environment]
+    TELEGRAM_TOKEN = "PREVIEW_TELEGRAM_TOKEN"
+    TELEGRAM_CHAT_ID = "PREVIEW_TELEGRAM_CHAT_ID"
 
 [context.production]
   command = "sed -i \"s|PROD_TELEGRAM_TOKEN|${PROD_TELEGRAM_TOKEN}|g\" netlify.toml && sed -i \"s|PROD_TELEGRAM_CHAT_ID|${PROD_TELEGRAM_CHAT_ID}|g\" netlify.toml && yarn build"
-  TELEGRAM_TOKEN = "PROD_TELEGRAM_TOKEN"
-  TELEGRAM_CHAT_ID = "PROD_TELEGRAM_CHAT_ID"
+  [context.production.environment]
+    TELEGRAM_TOKEN = "PROD_TELEGRAM_TOKEN"
+    TELEGRAM_CHAT_ID = "PROD_TELEGRAM_CHAT_ID"
