@@ -1,9 +1,10 @@
 <script lang="ts">
 	export let bottomPolygon: boolean = true;
 	export let id: string = undefined;
+	export let className: string = '';
 </script>
 
-<section {id} class="mt-8 lg:mt-16 py-8 w-full">
+<section {id} class="mt-8 lg:mt-16 py-8 w-full {className}">
 	<div
 		class="bg-green h-8 lg:h-16 [clip-path:polygon(0%_2rem,0%_100%,100%_100%,100%_0%)] lg:[clip-path:polygon(0%_4rem,0%_100%,100%_100%,100%_0%)]"
 	/>

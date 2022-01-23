@@ -30,7 +30,7 @@
 	};
 </script>
 
-<Section {id} bottomPolygon={false}>
+<Section {id} className="pb-0" bottomPolygon={false}>
 	<div class="bg-green py-8 pb-16 lg:py-16 lg:pb-24 w-full grid">
 		<div class="prose lg:prose-xl prose-headings:text-beige text-beige mx-auto px-4">
 			<article>
