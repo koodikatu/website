@@ -9,10 +9,10 @@
     output_path = "reports/lighthouse.html"
 
 [context.deploy-preview]
-  command = "sed -i \"s|PREVIEW_TELEGRAM_TOKEN|${PREVIEW_TELEGRAM_TOKEN}|g\" netlify.toml && sed -i \"s|PREVIEW_TELEGRAM_CHAT_ID|${PREVIEW_TELEGRAM_CHAT_ID}|g\" netlify.toml && yarn build"
+  # command = "sed -i \"s|PREVIEW_TELEGRAM_TOKEN|${PREVIEW_TELEGRAM_TOKEN}|g\" netlify.toml && sed -i \"s|PREVIEW_TELEGRAM_CHAT_ID|${PREVIEW_TELEGRAM_CHAT_ID}|g\" netlify.toml && yarn build"
   [context.deploy-preview.environment]
-    TELEGRAM_TOKEN = "PREVIEW_TELEGRAM_TOKEN"
-    TELEGRAM_CHAT_ID = "PREVIEW_TELEGRAM_CHAT_ID"
+    TELEGRAM_TOKEN = "629393939"
+    TELEGRAM_CHAT_ID = "5138591228:AAG5fW66a-Cd12amoSXELCNp0lRI8Ak_Z30"
 
 [context.production]
   command = "sed -i \"s|PROD_TELEGRAM_TOKEN|${PROD_TELEGRAM_TOKEN}|g\" netlify.toml && sed -i \"s|PROD_TELEGRAM_CHAT_ID|${PROD_TELEGRAM_CHAT_ID}|g\" netlify.toml && yarn build"
