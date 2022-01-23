@@ -7,5 +7,10 @@
 }
 
 body {
-	@apply bg-beige;
+	@apply bg-beige; 
+}
+
+#svelte {
+	@apply min-h-screen grid content-between;
+	justify-content: stretch;
 }
