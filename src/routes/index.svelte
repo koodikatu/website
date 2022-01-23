@@ -70,8 +70,12 @@
 	</div>
 </Section>
 <section class="mt-8 lg:mt-16 px-4 prose lg:prose-xl text-green prose-headings:text-green">
-	<img src={profilePicture} srcset="{profilePicture2x} 2x" alt="" class="w-[175px] h-[175px]" />
-	<h3 class="uppercase">About me</h3>
+	<img
+		src={profilePicture}
+		srcset="{profilePicture2x} 2x"
+		alt=""
+		class="w-[175px] h-[175px] lg:w-52 lg:h-52"
+	/>
 	<h2 class="mt-0">Hey, I'm John</h2>
 	<main>
 		<p>
