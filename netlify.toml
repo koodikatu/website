@@ -8,7 +8,11 @@
   [plugins.inputs]
     output_path = "reports/lighthouse.html"
 
-[context.deploy-preview]
-  command = "sed -i \"s|TG_TOKEN_PLACEHOLDER|${PREVIEW_TELEGRAM_TOKEN}|g\" netlify.toml && sed -i \"s|TG_CHAT_ID_PLACEHOLDER|${PREVIEW_TELEGRAM_CHAT_ID}|g\" netlify.toml && yarn build"
-  TELEGRAM_TOKEN = "TG_TOKEN_PLACEHOLDER"
-  TELEGRAM_CHAT_ID = "TG_CHAT_ID_PLACEHOLDER"
+[context.deploy-preview.environment]
+  # command = "sed -i \"s|TG_TOKEN_PLACEHOLDER|${PREVIEW_TELEGRAM_TOKEN}|g\" netlify.toml && sed -i \"s|TG_CHAT_ID_PLACEHOLDER|${PREVIEW_TELEGRAM_CHAT_ID}|g\" netlify.toml && yarn build"
+  TELEGRAM_TOKEN = "$PREVIEW_TELEGRAM_TOKEN"
+  TELEGRAM_CHAT_ID = "$PREVIEW_TELEGRAM_CHAT_ID"
+
+[context.production.environment]
+  TELEGRAM_TOKEN = "$PROD_TELEGRAM_TOKEN"
+  TELEGRAM_CHAT_ID = "$PROD_TELEGRAM_CHAT_ID"
