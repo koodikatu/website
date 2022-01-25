@@ -11,7 +11,7 @@ dotenv.config();
 
 const MessageBody = t.type({
 	name: t.string,
-	email: t.union([t.string, t.undefined]),
+	email: t.string,
 	message: t.string
 });
 
