@@ -3,7 +3,7 @@
   publish = "build"
 
 [context.deploy-preview.environment]
-  DEPLOY_PREVIEW = true
+  DEPLOY_PREVIEW = "true"
 
 [[plugins]]
   package = "@netlify/plugin-lighthouse"
