@@ -3,4 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-export const get: RequestHandler = () => ({ status: 200, body: JSON.stringify(process.env) });
+export const get: RequestHandler = () => ({
+	status: 200,
+	body: JSON.stringify({ process: process.env, vite: import.meta.env })
+});
