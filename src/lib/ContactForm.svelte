@@ -31,8 +31,8 @@
 </script>
 
 <Section {id} className="pb-0" bottomPolygon={false}>
-	<div class="bg-green py-8 pb-16 lg:py-16 lg:pb-24 w-full grid">
-		<div class="prose lg:prose-xl prose-headings:text-beige text-beige mx-auto px-4">
+	<div class="grid w-full bg-green py-8 pb-16 lg:py-16 lg:pb-24">
+		<div class="prose mx-auto px-4 text-beige prose-headings:text-beige lg:prose-xl">
 			<article>
 				<h2>Ready to bring your business to the next level?</h2>
 				<p>
@@ -42,7 +42,7 @@
 				</p>
 			</article>
 			<form
-				class="bg-beige text-green grid rounded-md p-4 lg:p-8 gap-4"
+				class="grid gap-4 rounded-md bg-beige p-4 text-green lg:p-8"
 				on:submit|preventDefault={handleSubmit}
 			>
 				<label class="grid" for="name">
@@ -51,7 +51,7 @@
 						bind:value={name}
 						type="text"
 						required
-						class="bg-salmon border-0 rounded-md shadow-current shadow-sm focus:ring focus:ring-orange"
+						class="shadow-current rounded-md border-0 bg-salmon shadow-sm focus:ring focus:ring-orange"
 					/>
 				</label>
 				<label class="grid" for="email">
@@ -60,7 +60,7 @@
 						bind:value={email}
 						type="email"
 						id="email"
-						class="bg-salmon border-0 rounded-md shadow-current shadow-sm focus:ring focus:ring-orange"
+						class="shadow-current rounded-md border-0 bg-salmon shadow-sm focus:ring focus:ring-orange"
 					/>
 				</label>
 				<label class="grid" for="message">
@@ -72,12 +72,12 @@
 						rows="10"
 						spellcheck
 						required
-						class="bg-salmon border-0 rounded-md shadow-current shadow-sm resize-none focus:ring focus:ring-orange"
+						class="shadow-current resize-none rounded-md border-0 bg-salmon shadow-sm focus:ring focus:ring-orange"
 					/>
 				</label>
 				<input
 					type="submit"
-					class="bg-salmon rounded-md shadow-current shadow-sm px-4 py-2 justify-self-start outline-0 focus:ring focus:ring-orange cursor-pointer"
+					class="shadow-current cursor-pointer justify-self-start rounded-md bg-salmon px-4 py-2 shadow-sm outline-0 focus:ring focus:ring-orange"
 					value="Reach out 👋"
 				/>
 				{#if contactError}

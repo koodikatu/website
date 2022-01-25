@@ -11,6 +11,6 @@
 	<slot />
 </main>
 
-<footer class="p-4 prose lg:prose-xl text-green m-auto">
+<footer class="prose m-auto p-4 text-green lg:prose-xl">
 	&copy; {year} Koodikatu | All Rights Reserved
 </footer>

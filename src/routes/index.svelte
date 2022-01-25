@@ -12,7 +12,7 @@
 	<title>Koodikatu - Home</title>
 </svelte:head>
 
-<section class="px-4 mt-8 lg:mt-16 prose lg:prose-xl prose-h1:text-green">
+<section class="prose mt-8 px-4 prose-h1:text-green lg:prose-xl lg:mt-16">
 	<h1>
 		Let's go on an adventure <span class="underline">together</span> and build modern services you are
 		proud to share
@@ -20,13 +20,13 @@
 	<a
 		href={`#${contactRef}`}
 		rel="external"
-		class="w-full lg:w-auto bg-salmon rounded-full p-2 lg:p-4 lg:px-8 text-lg font-bold no-underline"
+		class="w-full rounded-full bg-salmon p-2 text-lg font-bold no-underline lg:w-auto lg:p-4 lg:px-8"
 		>Get in touch</a
 	>
 </section>
 <Section>
-	<div class="bg-green grid py-8 pb-16 lg:py-16 lg:pb-24 w-full justify-items-center">
-		<section class="prose lg:prose-xl lg:max-w-5xl prose-headings:text-salmon text-beige px-4">
+	<div class="grid w-full justify-items-center bg-green py-8 pb-16 lg:py-16 lg:pb-24">
+		<section class="prose px-4 text-beige prose-headings:text-salmon lg:prose-xl lg:max-w-5xl">
 			<h2>We will walk forth together, one step at a time</h2>
 			<p>
 				During our collaboration, we will regularly sync to be sure our teamwork is going well and
@@ -69,12 +69,12 @@
 		</section>
 	</div>
 </Section>
-<section class="mt-8 lg:mt-16 px-4 prose lg:prose-xl text-green prose-headings:text-green">
+<section class="prose mt-8 px-4 text-green prose-headings:text-green lg:prose-xl lg:mt-16">
 	<img
 		src={profilePicture}
 		srcset="{profilePicture2x} 2x"
 		alt=""
-		class="w-[175px] h-[175px] lg:w-52 lg:h-52"
+		class="h-[175px] w-[175px] lg:h-52 lg:w-52"
 	/>
 	<h2 class="mt-0">Hey, I'm John</h2>
 	<main>
