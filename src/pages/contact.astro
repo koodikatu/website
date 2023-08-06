@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Koodikatu | Contact">
   <main
-    class="prose lg:prose-xl lg:prose-h2:mt-0 prose-ul:p-0 px-2 lg:px-0 lg:mt-8 w-full max-w-4xl mx-auto grid grid-flow-row lg:grid-flow-col lg:gap-8 lg:divide-x divide-solid justify-stretch"
+    class="prose lg:prose-xl lg:prose-h2:mt-0 prose-ul:p-0 px-2 lg:px-0 lg:mt-8 w-full max-w-4xl mx-auto grid grid-flow-row lg:grid-cols-2 lg:gap-8 lg:divide-x divide-solid justify-stretch"
   >
     <section>
       <h2>Messengers</h2>
@@ -41,6 +41,27 @@ import Layout from "../layouts/Layout.astro";
     </section>
     <section class="lg:pl-8">
       <h2>Send an email</h2>
+      <form 
+        name="contact" 
+        method="POST" 
+        action="/email-sent"
+        data-netlify="true"
+      >
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          class="w-full border border-slate-200 rounded p-2"
+        />
+        <label for="message">Message</label>
+        <textarea
+          name="message"
+          id="message"
+          class="w-full border border-slate-200 rounded p-2"
+          placeholder="Type your message here"
+        ></textarea>
+      </form>
     </section>
   </main>
 </Layout>
