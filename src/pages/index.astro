@@ -1,29 +1,44 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Koodikatu | Homepage">
-	<main class="prose-xl">
-    <section class="flex flex-col justify-center items-center min-h-sm lg:min-h-xl">
-      <h2>Koodikatu</h2>
-      <p>A companion for your tech dreams</p>
+  <main class="prose-xl">
+    <section
+      class="px-2 flex flex-col lg:flex-row justify-center items-start lg:items-center gap-4 lg:gap-12 min-h-sm lg:min-h-lg"
+    >
+      <img
+        src="/humaaans-meeting.png"
+        alt="Illustration scene where two customers are meeting with John from Koodikatu"
+        class="mb-0"
+      />
+      <div>
+        <h2 class="m-0">Koodikatu</h2>
+        <p>A companion for your tech dreams</p>
+      </div>
     </section>
     <section class="px-2 lg:px-0 max-w-4xl mx-auto">
       <h2>Customers</h2>
       <ul class="not-prose list-none grid grid-cols-2 lg:grid-cols-4 gap-2 p-0">
-        <li class="min-h-[7rem] flex flex-col items-center justify-center bg-slate-200 rounded">
+        <li
+          class="min-h-[7rem] flex flex-col items-center justify-center bg-slate-200 rounded"
+        >
           <h3 class="sr-only">Gubbe Oy</h3>
-          <img src="/gubbe.svg" alt="Gubbe logo" class="h-7">
+          <img src="/gubbe.svg" alt="Gubbe logo" class="h-7" />
         </li>
-        <li class="min-h-[7rem] flex flex-col items-center justify-center bg-slate-200 rounded">
+        <li
+          class="min-h-[7rem] flex flex-col items-center justify-center bg-slate-200 rounded"
+        >
           <h3 class="sr-only">Zoined Oy</h3>
-          <img src="/zoined.svg" alt="Zoined logo" class="h-7">
+          <img src="/zoined.svg" alt="Zoined logo" class="h-7" />
         </li>
-        <li class="min-h-[7rem] flex flex-col items-center justify-center bg-slate-200 rounded">
+        <li
+          class="min-h-[7rem] flex flex-col items-center justify-center bg-slate-200 rounded"
+        >
           <h3 class="sr-only">Mobal Oy</h3>
-          <img src="/mobal.svg" alt="Mobal logo" class="h-7">
+          <img src="/mobal.svg" alt="Mobal logo" class="h-7" />
         </li>
       </ul>
     </section>
-	</main>
+  </main>
 </Layout>
