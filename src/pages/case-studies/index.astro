@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+const caseStudies = await getCollection("case-studies");
+---
+
+<Layout title="Koodikatu | Case studies">
+  <main>
+    <h2>Case Studies</h2>
+    <ul>
+      {
+        caseStudies.map((caseStudy) => (
+          <li>
+            <a href={`/case-studies/${caseStudy.slug}`}>
+              {caseStudy.data.title}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </main>
+</Layout>
