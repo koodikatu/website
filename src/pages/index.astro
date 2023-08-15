@@ -3,24 +3,65 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Koodikatu | Homepage">
-  <main class="prose-xl">
-    <section
-      class="px-2 flex flex-col lg:flex-row justify-center items-start lg:items-center gap-4 lg:gap-12 min-h-sm lg:min-h-lg"
-    >
-      <img
-        src="/humaaans-meeting.png"
-        alt="Illustration scene where two customers are meeting with John from Koodikatu"
-        class="mb-0"
-      />
-      <div>
-        <h2 class="m-0">Koodikatu</h2>
-        <p>A companion for your tech dreams</p>
+  <main
+    class="prose md:prose-xl md:prose-h2:font-normal prose-ul:p-0 max-w-none"
+  >
+    <section class="w-full max-w-6xl mx-auto px-2 lg:px-0">
+      <h2 class="md:text-6xl">
+        We are <span class="italic">Koodikatu</span>, a tech companion to bring
+        your projects to life
+      </h2>
+      <div
+        class="flex justify-center items-center rounded-xl bg-gradient-to-tr from-pink-500 via-orange-500 to-yellow-500 overflow-scroll"
+      >
+        <img src="/phone.png" class="hidden md:block h-96" />
+        <img src="/humans-sitting-at-desk.png" class="h-64 md:h-80" />
+        <img src="/rocket.png" class="hidden md:block h-80" />
       </div>
     </section>
-    <section class="px-2 lg:px-0 max-w-4xl mx-auto">
-      <h2>Customers</h2>
-      <ul class="not-prose list-none grid grid-cols-2 lg:grid-cols-4 gap-2 p-0">
-        <li class="flex min-h-[7rem] bg-slate-200 rounded">
+    <section class="px-2 lg:px-0 max-w-6xl mx-auto mt-4 md:mt-8">
+      <h2 class="sr-only">Discover more</h2>
+      <ul
+        class="not-prose list-none grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 p-0"
+      >
+        <li
+          class="flex min-h-[7rem] bg-gradient-to-br from-teal-500 via-cyan-600 to-blue-500 rounded-xl"
+        >
+          <a
+            href="/case-studies"
+            class="flex-1 flex items-center justify-center gap-4"
+          >
+            <img
+              src="/human-with-laptop.png"
+              alt="3D illustration of a human with a laptop"
+              class="w-20"
+            />
+            <h3 class="font-semibold text-white">Case studies</h3>
+          </a>
+        </li>
+        <li
+          class="flex min-h-[7rem] bg-gradient-to-br from-teal-500 via-cyan-600 to-blue-500 rounded-xl"
+        >
+          <a
+            href="/blog"
+            class="flex-1 flex items-center justify-center gap-5 md:gap-7"
+          >
+            <img
+              src="/writing.png"
+              alt="3D illustration of a hand writing"
+              class="w-20"
+            />
+            <h3 class="font-semibold text-white">Blog</h3>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="px-2 lg:px-0 max-w-6xl mx-auto">
+      <h2>Trusted by</h2>
+      <ul
+        class="not-prose list-none grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 p-0"
+      >
+        <li class="flex min-h-[7rem] bg-slate-200 rounded-xl">
           <a
             href="https://gubbe.fi"
             target="_blank"
@@ -30,7 +71,7 @@ import Layout from "../layouts/Layout.astro";
             <img src="/gubbe.svg" alt="Gubbe logo" class="h-7" />
           </a>
         </li>
-        <li class="flex min-h-[7rem] bg-slate-200 rounded">
+        <li class="flex min-h-[7rem] bg-slate-200 rounded-xl">
           <a
             href="https://zoined.com"
             target="_blank"
@@ -40,7 +81,7 @@ import Layout from "../layouts/Layout.astro";
             <img src="/zoined.svg" alt="Zoined logo" class="h-7" />
           </a>
         </li>
-        <li class="flex min-h-[7rem] bg-slate-200 rounded">
+        <li class="flex min-h-[7rem] bg-slate-200 rounded-xl">
           <a
             href="https://mobal.io"
             target="_blank"
