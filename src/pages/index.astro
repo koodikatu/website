@@ -22,8 +22,23 @@ import Layout from "../layouts/Layout.astro";
     <section class="px-2 lg:px-0 max-w-6xl mx-auto mt-4 lg:mt-8">
       <h2 class="sr-only">Discover more</h2>
       <ul
-        class="not-prose list-none grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 p-0"
+        class="not-prose list-none grid md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-8 p-0"
       >
+        <li
+          class="flex min-h-[7rem] bg-gradient-to-br from-teal-500 via-cyan-600 to-blue-500 rounded-xl"
+        >
+          <a
+            href="/services"
+            class="flex-1 flex items-center justify-center gap-5 md:gap-7"
+          >
+            <img
+              src="/diamond-and-arrow.png"
+              alt="3D illustration of a diamond with an arrow cursor"
+              class="w-20"
+            />
+            <h3 class="font-semibold text-white">Services</h3>
+          </a>
+        </li>
         <li
           class="flex min-h-[7rem] bg-gradient-to-br from-teal-500 via-cyan-600 to-blue-500 rounded-xl"
         >
