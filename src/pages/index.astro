@@ -27,14 +27,18 @@ import Layout from "../layouts/Layout.astro";
         >
           <a
             href="/services"
-            class="flex-1 flex items-center justify-center gap-5 md:gap-7"
+            class="flex-1 grid grid-cols-2 md:grid-cols-3 items-center gap-5 md:gap-0 md:pl-5"
           >
             <img
               src="/diamond-and-arrow.png"
               alt="3D illustration of a diamond with an arrow cursor"
-              class="w-20"
+              class="w-20 place-self-center md:col-span-1"
             />
-            <h3 class="font-semibold text-white">Services</h3>
+            <h3
+              class="font-semibold text-white md:col-span-2 md:col-start-2 md:place-self-center"
+            >
+              Services
+            </h3>
           </a>
         </li>
         <li
@@ -51,14 +55,18 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <a
             href="/case-studies"
-            class="flex-1 flex items-center justify-center gap-4"
+            class="flex-1 grid grid-cols-2 md:grid-cols-3 items-center gap-5 md:gap-0 md:pl-5"
           >
             <img
               src="/human-with-laptop.png"
               alt="3D illustration of a human with a laptop"
-              class="-m-3 w-20"
+              class="w-20 place-self-center md:col-span-1"
             />
-            <h3 class="font-semibold text-white">Case studies</h3>
+            <h3
+              class="font-semibold text-white md:col-span-2 md:col-start-2 md:ml-2"
+            >
+              Case studies
+            </h3>
           </a>
         </li>
         <li
@@ -73,16 +81,13 @@ import Layout from "../layouts/Layout.astro";
               Coming soon
             </div>
           </div>
-          <a
-            href="/blog"
-            class="flex-1 flex items-center justify-center gap-5 md:gap-7"
-          >
+          <a href="/blog" class="flex-1 grid grid-cols-2 items-center gap-5">
             <img
               src="/writing.png"
               alt="3D illustration of a hand writing"
-              class="w-20"
+              class="w-20 place-self-center md:justify-self-end"
             />
-            <h3 class="font-semibold text-white">Blog</h3>
+            <h3 class="font-semibold text-white md:pl-5">Blog</h3>
           </a>
         </li>
       </ul>
