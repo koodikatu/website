@@ -92,6 +92,21 @@ import Layout from "../layouts/Layout.astro";
       <ul
         class="not-prose list-none grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-8 p-0"
       >
+        <li class="relative flex min-h-[7rem] bg-slate-200 rounded-xl">
+          <span
+            class="absolute bottom-2 right-2 rounded text-xs px-1 font-semibold bg-green-400/75 select-none"
+          >
+            Ongoing
+          </span>
+          <a
+            href="https://mobal.io"
+            target="_blank"
+            class="flex-1 flex flex-col items-center justify-center"
+          >
+            <h3 class="sr-only">Mobal Oy</h3>
+            <img src="/mobal.svg" alt="Mobal logo" class="h-7" />
+          </a>
+        </li>
         <li class="flex min-h-[7rem] bg-slate-200 rounded-xl">
           <a
             href="https://gubbe.fi"
@@ -110,16 +125,6 @@ import Layout from "../layouts/Layout.astro";
           >
             <h3 class="sr-only">Zoined Oy</h3>
             <img src="/zoined.svg" alt="Zoined logo" class="h-7" />
-          </a>
-        </li>
-        <li class="flex min-h-[7rem] bg-slate-200 rounded-xl">
-          <a
-            href="https://mobal.io"
-            target="_blank"
-            class="flex-1 flex flex-col items-center justify-center"
-          >
-            <h3 class="sr-only">Mobal Oy</h3>
-            <img src="/mobal.svg" alt="Mobal logo" class="h-7" />
           </a>
         </li>
       </ul>
